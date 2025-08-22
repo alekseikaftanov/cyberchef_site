@@ -58,37 +58,30 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle, isMenuOpen = false
         <nav className="flex items-center gap-8">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors"
+            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors cursor-pointer"
           >
             О нас
           </button>
           
           <button 
-            onClick={() => scrollToSection('technologies')}
-            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors"
+            onClick={() => scrollToSection('services')}
+            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors cursor-pointer"
           >
-            Технологии
+            Услуги
           </button>
           
           <button 
-            onClick={() => scrollToSection('packages')}
-            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors"
+            onClick={() => scrollToSection('contacts')}
+            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors cursor-pointer"
           >
-            Пакеты
-          </button>
-          
-          <button 
-            onClick={() => scrollToSection('faq')}
-            className="text-white font-[var(--font-inter)] font-normal text-base leading-[135%] tracking-[-0.02em] hover:text-gray-200 transition-colors"
-          >
-            FAQ
+            Контакты
           </button>
         </nav>
 
         {/* CTA Button */}
         <button
           onClick={openRequestPopup}
-          className="flex items-center justify-center gap-1.5 px-4 py-3 w-[185px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all"
+          className="flex items-center justify-center gap-1.5 px-4 py-3 w-[185px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all cursor-pointer"
         >
           <span className="text-white font-[var(--font-inter)] font-medium text-base leading-[135%] tracking-[-0.04em]">
             Связаться с нами

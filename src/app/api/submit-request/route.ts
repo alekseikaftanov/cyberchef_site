@@ -72,10 +72,10 @@ export async function POST(request: NextRequest) {
         <!-- Заголовок -->
         <div style="text-align: center; margin-bottom: 30px; padding: 20px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px;">
           <h1 style="color: #333; margin: 0; font-size: 28px; font-weight: 600;">
-            Новая заявка с сайта
+            Заявка с сайта
           </h1>
           <h2 style="color: #6C1EFF; margin: 5px 0 0 0; font-size: 32px; font-weight: 700;">
-            ТЕХВИЛЛ
+            Кибершеф
           </h2>
         </div>
         
@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
         <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
 
           <p style="color: #888; font-size: 14px;">
-            Заявка отправлена с сайта <a href="https://techvill.ru" style="color: #A5F04B;">ТЕХВИЛЛ</a>
+            Заявка отправлена с сайта <a href="https://cyberchef.com" style="color: #A5F04B;">Кибершеф</a>
           </p>
           <p style="color: #888; font-size: 12px;">
             Время отправки: ${new Date().toLocaleString('ru-RU')}

@@ -236,11 +236,11 @@ export const RequestPopup: React.FC<RequestPopupProps> = ({ open, onClose }) => 
             </div>
             <label htmlFor="privacy-agree" className={styles.agreeText}>
               Я даю согласие на обработку{' '}
-              <a href="/personal-data" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
+              <a href="/personal-data?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
                 персональных данных
               </a>
               {' '}и соглашаюсь с{' '}
-              <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
+              <a href="/privacy-policy?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
                 политикой конфиденциальности
               </a>
             </label>

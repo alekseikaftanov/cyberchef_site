@@ -58,36 +58,22 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           <nav className="space-y-1">
             {/* Menu items - same as desktop */}
             <button 
-              onClick={() => scrollToSection('services')}
-              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors"
-            >
-              Услуги
-            </button>
-            
-            <button 
-              onClick={() => scrollToSection('portfolio')}
-              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors"
-            >
-              Портфолио
-            </button>
-            
-            <button 
               onClick={() => scrollToSection('about')}
-              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors"
+              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors cursor-pointer"
             >
               О нас
             </button>
             
             <button 
-              onClick={() => scrollToSection('directions')}
-              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors"
+              onClick={() => scrollToSection('services')}
+              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors cursor-pointer"
             >
-              Направления
+              Услуги
             </button>
             
             <button 
               onClick={() => scrollToSection('contacts')}
-              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors"
+              className="w-full text-left py-4 text-[24px] font-semibold text-[#333] font-montserrat hover:text-[#666] transition-colors cursor-pointer"
             >
               Контакты
             </button>

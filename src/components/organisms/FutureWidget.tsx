@@ -51,7 +51,7 @@ export const FutureWidget: React.FC<FutureWidgetProps> = ({ className }) => {
         {/* Кнопка CTA */}
         <button
           onClick={openRequestPopup}
-          className="absolute left-32 top-59 flex items-center justify-center gap-1.5 px-4 py-3 w-[234px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all"
+          className="absolute left-32 top-59 flex items-center justify-center gap-1.5 px-4 py-3 w-[234px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all cursor-pointer"
         >
           <span className="text-white font-[var(--font-inter)] font-medium text-base leading-[135%] text-center tracking-[-0.04em] w-[180px] h-[22px]">
             Получить консультацию

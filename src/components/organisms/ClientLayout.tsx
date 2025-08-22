@@ -29,9 +29,6 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
           {children}
         </main>
         
-        {/* Footer */}
-        <Footer />
-        
         {/* Global Resume Popup */}
         <ResumePopup />
       </ResumePopupProvider>
