@@ -5,7 +5,6 @@ export { MobileMenu } from './MobileMenu';
 export { RequestPopup } from './RequestPopup';
 export { ResumePopup } from './ResumePopup';
 export { VideoHeroWidget } from './VideoHeroWidget';
-export { VideoSection } from './VideoSection';
 export { AboutWidget } from './AboutWidget';
 export { ServicesWidget } from './ServicesWidget';
 export { FutureWidget } from './FutureWidget'; 
