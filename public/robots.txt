@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://techvill.ru/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /cabinet/
+Disallow: /personal-data/
+
+# Crawl delay (optional)
+Crawl-delay: 1
