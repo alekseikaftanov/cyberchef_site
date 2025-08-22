@@ -87,7 +87,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               openRequestPopup();
               onClose();
             }}
-            className="w-full bg-[#A5F04B] text-[#333] font-semibold text-[18px] rounded-[20px] px-6 py-4 flex items-center justify-center transition-colors hover:bg-[#8EDB1B] font-inter"
+            className="w-full bg-black text-white font-semibold text-[18px] rounded-[20px] px-6 py-4 flex items-center justify-center transition-colors hover:bg-gray-800 font-inter"
           >
             Оставить заявку
             <span className="ml-2">→</span>
