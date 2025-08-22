@@ -4,5 +4,6 @@ export { Footer } from './Footer';
 export { MobileMenu } from './MobileMenu';
 export { RequestPopup } from './RequestPopup';
 export { ResumePopup } from './ResumePopup';
-export { default as VideoHeroWidget } from './VideoHeroWidget';
-export { default as VideoSection } from './VideoSection'; 
+export { VideoHeroWidget } from './VideoHeroWidget';
+export { VideoSection } from './VideoSection';
+export { AboutWidget } from './AboutWidget'; 

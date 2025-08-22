@@ -1,47 +1,40 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { cn } from '@/utils/cn';
-import { HeroBackgroundPlaceholder } from '@/components/atoms/HeroBackgroundPlaceholder';
 
 interface VideoHeroWidgetProps {
-  backgroundImage?: string;
-  onCtaClick?: () => void;
+  backgroundVideo?: string;
   className?: string;
 }
 
 export const VideoHeroWidget: React.FC<VideoHeroWidgetProps> = ({
-  backgroundImage = "/pictures/hero/HeroBlock.svg",
-  onCtaClick,
+  backgroundVideo = "/videos/heroblock_video.mp4",
   className,
 }) => {
-  const [imageError, setImageError] = useState(false);
-
-  const handleImageError = () => {
-    setImageError(true);
-  };
-
   return (
     <div className={cn("relative min-h-screen flex items-end overflow-hidden pt-20", className)}>
-      {/* Фоновое изображение с градиентом или заглушка */}
-      {!imageError && backgroundImage ? (
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+      {/* Видео фон */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
           style={{
-            backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%), url(${backgroundImage})`
+            filter: 'brightness(0.7) contrast(1.2)'
           }}
         >
-          {/* Скрытое изображение для проверки загрузки */}
-          <img
-            src={backgroundImage}
-            alt=""
-            className="hidden"
-            onError={handleImageError}
-          />
-        </div>
-      ) : (
-        <HeroBackgroundPlaceholder />
-      )}
+          <source src={backgroundVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Градиент поверх видео для лучшей читаемости текста */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/20"
+        ></div>
+      </div>
       
       {/* Контент - позиционирован внизу слева согласно дизайну */}
       <div className="relative z-10 flex flex-col items-start px-8 md:px-32 lg:px-32 gap-6 pb-20">
