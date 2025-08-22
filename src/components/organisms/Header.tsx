@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRequestPopup } from '@/contexts/RequestPopupContext';
 
 interface HeaderProps {
   onMenuToggle?: (isMenuOpen: boolean) => void;
@@ -9,6 +10,18 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ onMenuToggle, isMenuOpen = false }) => {
+  let openRequestPopup: (() => void) | undefined;
+  
+  try {
+    const context = useRequestPopup();
+    openRequestPopup = context.openRequestPopup;
+  } catch {
+    // Fallback если контекст недоступен
+    openRequestPopup = () => {
+      console.warn('RequestPopup context not available');
+    };
+  }
+  
   const scrollToSection = (sectionId: string) => {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
@@ -74,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle, isMenuOpen = false
 
         {/* CTA Button */}
         <button
-          onClick={() => scrollToSection('contact')}
+          onClick={openRequestPopup}
           className="flex items-center justify-center gap-1.5 px-4 py-3 w-[185px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all"
         >
           <span className="text-white font-[var(--font-inter)] font-medium text-base leading-[135%] tracking-[-0.04em]">

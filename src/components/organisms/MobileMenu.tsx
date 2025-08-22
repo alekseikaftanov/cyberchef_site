@@ -1,11 +1,26 @@
 'use client'
 
+import { useRequestPopup } from '@/contexts/RequestPopupContext';
+
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+  let openRequestPopup: (() => void) | undefined;
+  
+  try {
+    const context = useRequestPopup();
+    openRequestPopup = context.openRequestPopup;
+  } catch {
+    // Fallback если контекст недоступен
+    openRequestPopup = () => {
+      console.warn('RequestPopup context not available');
+      onClose();
+    };
+  }
+  
   if (!isOpen) return null;
 
   const scrollToSection = (sectionId: string) => {
@@ -82,7 +97,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         {/* Bottom CTA Button */}
         <div className="p-6 bg-white">
           <button
-            onClick={() => scrollToSection('lets-create')}
+            onClick={() => {
+              openRequestPopup();
+              onClose();
+            }}
             className="w-full bg-[#A5F04B] text-[#333] font-semibold text-[18px] rounded-[20px] px-6 py-4 flex items-center justify-center transition-colors hover:bg-[#8EDB1B] font-inter"
           >
             Оставить заявку
