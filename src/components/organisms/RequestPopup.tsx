@@ -48,7 +48,7 @@ export const RequestPopup: React.FC<RequestPopupProps> = ({ open, onClose }) => 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: typeof errors = {};
-    if (!fio.trim()) newErrors.fio = 'Введите ФИО';
+    if (!fio.trim()) newErrors.fio = 'Введите имя';
     if (!company.trim()) newErrors.company = 'Введите название компании';
     if (!validateEmail(email)) newErrors.email = 'Некорректный email';
     if (!phoneValid) newErrors.phone = 'Введите корректный телефон';
@@ -137,11 +137,25 @@ export const RequestPopup: React.FC<RequestPopupProps> = ({ open, onClose }) => 
           <span className={styles.closeIcon}>&times;</span>
         </button>
         <div className={styles.headerBlock}>
-          <div className={styles.headerRow}>
-            <span className={styles.title}>Оставить заявку</span>
-            <div className={styles.headerIcon}></div>
+          <div className={styles.videoBackground}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={styles.backgroundVideo}
+            >
+              <source src="/videos/shopping_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className={styles.videoOverlay}></div>
           </div>
-          <div className={styles.subtitle}>Просто заполните форму, и мы обсудим ваш проект в ближайшее время</div>
+          <div className={styles.headerContent}>
+            <div className={styles.headerRow}>
+              <span className={styles.title}>Оставить заявку</span>
+            </div>
+            <div className={styles.subtitle}>Просто заполните форму, и мы обсудим ваш проект в ближайшее время и уточним стоимость проекта</div>
+          </div>
         </div>
         {success ? (
           <div className={styles.successMsg}>Спасибо! Ваша заявка отправлена.</div>
@@ -214,7 +228,9 @@ export const RequestPopup: React.FC<RequestPopupProps> = ({ open, onClose }) => 
                 onChange={handleFileChange}
               />
               <span className={styles.fileBtn}>Приложить файл</span>
-              <span className={styles.fileIcon}></span>
+              <svg className={styles.fileIcon} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.44 11.05L12.25 20.24C11.1242 21.3658 9.59717 21.9983 8.005 21.9983C6.41283 21.9983 4.88579 21.3658 3.76 20.24C2.63421 19.1142 2.00168 17.5872 2.00168 15.995C2.00168 14.4028 2.63421 12.8758 3.76 11.75L12.95 2.56C13.7006 1.80943 14.7169 1.3877 15.78 1.3877C16.8431 1.3877 17.8594 1.80943 18.61 2.56C19.3606 3.31057 19.7823 4.32689 19.7823 5.39C19.7823 6.45311 19.3606 7.46943 18.61 8.22L9.47 17.36C9.05672 17.7733 8.49607 18.0141 7.92 18.0141C7.34393 18.0141 6.78328 17.7733 6.37 17.36C5.95672 16.9467 5.71594 16.3861 5.71594 15.81C5.71594 15.2339 5.95672 14.6733 6.37 14.26L15.5 5.13" stroke="#5C5C5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </label>
             {file && (
               <div className={styles.fileInfo}>
@@ -236,11 +252,11 @@ export const RequestPopup: React.FC<RequestPopupProps> = ({ open, onClose }) => 
             </div>
             <label htmlFor="privacy-agree" className={styles.agreeText}>
               Я даю согласие на обработку{' '}
-              <a href="/personal-data?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
+              <a href="/personal-data?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#000000', textDecoration: 'underline' }}>
                 персональных данных
               </a>
               {' '}и соглашаюсь с{' '}
-              <a href="/privacy-policy?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
+              <a href="/privacy-policy?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#000000', textDecoration: 'underline' }}>
                 политикой конфиденциальности
               </a>
             </label>

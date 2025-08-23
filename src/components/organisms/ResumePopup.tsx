@@ -226,7 +226,9 @@ export const ResumePopup: React.FC = () => {
                 onChange={handleFileChange}
               />
               <span className={styles.fileBtn}>Приложить резюме</span>
-              <span className={styles.fileIcon}></span>
+              <svg className={styles.fileIcon} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.44 11.05L12.25 20.24C11.1242 21.3658 9.59717 21.9983 8.005 21.9983C6.41283 21.9983 4.88579 21.3658 3.76 20.24C2.63421 19.1142 2.00168 17.5872 2.00168 15.995C2.00168 14.4028 2.63421 12.8758 3.76 11.75L12.95 2.56C13.7006 1.80943 14.7169 1.3877 15.78 1.3877C16.8431 1.3877 17.8594 1.80943 18.61 2.56C19.3606 3.31057 19.7823 4.32689 19.7823 5.39C19.7823 6.45311 19.3606 7.46943 18.61 8.22L9.47 17.36C9.05672 17.7733 8.49607 18.0141 7.92 18.0141C7.34393 18.0141 6.78328 17.7733 6.37 17.36C5.95672 16.9467 5.71594 16.3861 5.71594 15.81C5.71594 15.2339 5.95672 14.6733 6.37 14.26L15.5 5.13" stroke="#5C5C5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </label>
             {resumeFile && (
               <div className={styles.fileInfo}>
@@ -249,11 +251,11 @@ export const ResumePopup: React.FC = () => {
             </div>
             <label htmlFor="resume-privacy-agree" className={styles.agreeText}>
               Я даю согласие на обработку{' '}
-              <a href="/personal-data?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
+              <a href="/personal-data?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#000000', textDecoration: 'underline' }}>
                 персональных данных
               </a>
               {' '}и соглашаюсь с{' '}
-              <a href="/privacy-policy?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline' }}>
+              <a href="/privacy-policy?from=form" target="_blank" rel="noopener noreferrer" style={{ color: '#000000', textDecoration: 'underline' }}>
                 политикой конфиденциальности
               </a>
             </label>

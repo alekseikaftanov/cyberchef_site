@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle, isMenuOpen = false
         {/* CTA Button */}
         <button
           onClick={openRequestPopup}
-          className="flex items-center justify-center gap-1.5 px-4 py-3 w-[185px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all cursor-pointer"
+          className="group flex items-center justify-center gap-1.5 px-4 py-3 w-[185px] h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all cursor-pointer relative overflow-hidden"
         >
           <span className="text-white font-[var(--font-inter)] font-medium text-base leading-[135%] tracking-[-0.04em]">
             Связаться с нами
@@ -89,6 +89,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle, isMenuOpen = false
           <span className="text-white font-[var(--font-inter)] font-medium text-base leading-[135%] tracking-[-0.04em]">
             →
           </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
         </button>
       </div>
 

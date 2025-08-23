@@ -93,7 +93,7 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({
           cursor-text transition-all duration-200 flex items-center justify-start
           px-4 py-3 box-border
           ${error ? 'border-red-500' : 'border-transparent'}
-          ${isFocused ? 'border-[#A5F04B] bg-[#f8fff0]' : ''}
+          ${isFocused ? 'border-transparent bg-[#f0f0f0]' : ''}
           ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
         `}
       >

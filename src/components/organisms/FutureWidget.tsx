@@ -51,7 +51,7 @@ export const FutureWidget: React.FC<FutureWidgetProps> = ({ className }) => {
         {/* Кнопка CTA */}
         <button
           onClick={openRequestPopup}
-          className="absolute left-4 sm:left-8 md:left-16 lg:left-32 top-48 sm:top-56 lg:top-59 flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3 w-[200px] sm:w-[220px] lg:w-[234px] min-h-[40px] sm:min-h-[44px] lg:min-h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all cursor-pointer"
+          className="group absolute left-4 sm:left-8 md:left-16 lg:left-32 top-48 sm:top-56 lg:top-59 flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3 w-[200px] sm:w-[220px] lg:w-[234px] min-h-[40px] sm:min-h-[44px] lg:min-h-[46px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl hover:bg-white/10 transition-all cursor-pointer relative overflow-hidden"
         >
           <span className="text-white font-[var(--font-inter)] font-medium text-sm sm:text-base leading-[135%] text-center tracking-[-0.04em] w-[160px] sm:w-[170px] lg:w-[180px] min-h-[20px] sm:min-h-[21px] lg:min-h-[22px]">
             Получить консультацию
@@ -59,6 +59,7 @@ export const FutureWidget: React.FC<FutureWidgetProps> = ({ className }) => {
           <span className="text-white font-[var(--font-inter)] font-medium text-sm sm:text-base leading-[135%] tracking-[-0.04em] w-3.5 sm:w-4 min-h-[20px] sm:min-h-[21px] lg:min-h-[22px]">
             →
           </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
         </button>
       </div>
     </section>
