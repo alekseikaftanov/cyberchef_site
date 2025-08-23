@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Header } from './Header';
 import { MobileMenu } from './MobileMenu';
-import { Footer } from './Footer';
 import { RequestPopupProvider } from '@/contexts/RequestPopupContext';
 import { ResumePopupProvider } from '@/contexts/ResumePopupContext';
 import { ResumePopup } from './ResumePopup';

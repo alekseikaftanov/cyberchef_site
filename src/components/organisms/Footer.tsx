@@ -67,7 +67,7 @@ export const Footer = () => {
                 О компании
               </h3>
               <p className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[44px]">
-                Общество с ограниченной ответственностью "КиберШеф"
+                Общество с ограниченной ответственностью &ldquo;КиберШеф&rdquo;
               </p>
               <p className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[66px]">
                 Основной ОКВЭД: 62.01 - Разработка компьютерного программного обеспечения

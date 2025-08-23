@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import { ClientScripts } from "@/components/atoms/ClientScripts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -193,8 +194,10 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${inter.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
+        <ClientScripts />
       </body>
     </html>
   );

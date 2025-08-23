@@ -20,6 +20,12 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: false,
   poweredByHeader: false,
+  // Настройки для лучшей обработки гидратации
+  experimental: {
+    optimizePackageImports: ['@/components'],
+  },
+  // Отключаем строгий режим для разработки
+  reactStrictMode: false,
 };
 
 export default nextConfig;
