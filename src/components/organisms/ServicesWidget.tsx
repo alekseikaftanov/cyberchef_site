@@ -36,7 +36,7 @@ export const ServicesWidget: React.FC<ServicesWidgetProps> = ({ className }) => 
     {
       id: 2,
       title: 'Автоматизация back-office',
-      description: 'Интеграция ERP/CRM решений, управление персоналом и процессами закупок, контроль издержек.',
+      description: 'Интеграция ERP/CRM решений, управление персоналом и процессами закупок, контроль издержек',
       image: null,
       tag: 'Под ключ',
       width: 'w-[684px]',
@@ -47,7 +47,7 @@ export const ServicesWidget: React.FC<ServicesWidgetProps> = ({ className }) => 
     {
       id: 3,
       title: 'Продуктовая аналитика',
-      description: 'Анализ продаж в реальном времени, прогнозирование спроса, оптимизация ассортимента и цен.',
+      description: 'Анализ продаж в реальном времени, прогнозирование спроса, оптимизация ассортимента и цен',
       image: '/pictures/services/analitics.svg',
       tag: null,
       width: 'w-[484px]',
@@ -58,7 +58,7 @@ export const ServicesWidget: React.FC<ServicesWidgetProps> = ({ className }) => 
     {
       id: 4,
       title: 'Умная логистика и склад',
-      description: 'Автоматизация цепочек поставок, оптимизация маршрутов доставки, роботизация складов.',
+      description: 'Автоматизация цепочек поставок, оптимизация маршрутов доставки, роботизация складов',
       image: '/pictures/services/logistic.svg',
       tag: null,
       width: 'w-[484px]',
@@ -110,7 +110,7 @@ export const ServicesWidget: React.FC<ServicesWidgetProps> = ({ className }) => 
               </h3>
               
               <p className="text-white/80 font-[var(--font-inter)] font-normal text-lg md:text-xl lg:text-[20px] leading-[135%] tracking-[-0.02em] max-w-[884px]">
-                Адаптируем пакеты предложений под ваш индивидуальный запрос. Так мы сможем подобрать наиболее подходящий путь для вашего бизнеса.
+              Адаптируем пакет предложений под индивидуальные запросы. Так мы сможем подобрать наиболее подходящий путь для вашего бизнеса.
               </p>
             </div>
           </div>
