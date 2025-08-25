@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { cn } from '@/utils/cn';
 
 interface VideoHeroWidgetProps {
@@ -12,19 +12,75 @@ export const VideoHeroWidget: React.FC<VideoHeroWidgetProps> = ({
   backgroundVideo = "/videos/heroblock_video.mp4",
   className,
 }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Обеспечиваем непрерывное воспроизведение
+    const ensurePlayback = () => {
+      if (video.paused || video.ended) {
+        video.play().catch(console.warn);
+      }
+    };
+
+    // Проверяем воспроизведение каждые 100ms
+    const intervalId = setInterval(ensurePlayback, 100);
+
+    // Обработчики событий для видео
+    const handleCanPlay = () => {
+      video.play().catch(console.warn);
+    };
+
+    const handleEnded = () => {
+      video.currentTime = 0;
+      video.play().catch(console.warn);
+    };
+
+    const handlePause = () => {
+      // Автоматически возобновляем воспроизведение
+      setTimeout(() => {
+        if (video.paused) {
+          video.play().catch(console.warn);
+        }
+      }, 100);
+    };
+
+    // Добавляем обработчики событий
+    video.addEventListener('canplay', handleCanPlay);
+    video.addEventListener('ended', handleEnded);
+    video.addEventListener('pause', handlePause);
+
+    // Начинаем воспроизведение
+    video.play().catch(console.warn);
+
+    return () => {
+      clearInterval(intervalId);
+      video.removeEventListener('canplay', handleCanPlay);
+      video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('pause', handlePause);
+    };
+  }, []);
+
   return (
     <div className={cn("relative min-h-screen flex items-end overflow-hidden pt-20", className)}>
       {/* Видео фон */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
           style={{
             filter: 'brightness(0.7) contrast(1.2)'
           }}
+          // Дополнительные атрибуты для стабильности
+          disablePictureInPicture
+          disableRemotePlayback
         >
           <source src={backgroundVideo} type="video/mp4" />
           Your browser does not support the video tag.

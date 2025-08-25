@@ -27,15 +27,29 @@ const nextConfig: NextConfig = {
   // Настройки для лучшей обработки гидратации
   experimental: {
     optimizePackageImports: ['@/components'],
-    // Дополнительные настройки для стабильности
-    serverComponentsExternalPackages: [],
   },
+  // Внешние пакеты для серверных компонентов
+  serverExternalPackages: [],
   // Отключаем строгий режим для разработки
   reactStrictMode: false,
   // Настройки для стабильности гидратации
   compiler: {
     // Отключаем некоторые оптимизации, которые могут вызывать проблемы
     removeConsole: false,
+  },
+  // Настройки для работы с видео
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp4|webm)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next/static/videos/',
+          outputPath: 'static/videos/',
+        },
+      },
+    });
+    return config;
   },
 };
 
