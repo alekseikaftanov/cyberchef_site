@@ -28,17 +28,17 @@ export const VideoHeroWidget: React.FC<VideoHeroWidgetProps> = ({
       } catch (error) {
         // Если браузер блокирует автовоспроизведение, пробуем другие способы
         if (error instanceof Error && error.name === 'NotAllowedError') {
-          // Пробуем воспроизвести после взаимодействия пользователя
-          const handleUserInteraction = async () => {
-            try {
-              await video.play();
-              document.removeEventListener('click', handleUserInteraction);
-              document.removeEventListener('keydown', handleUserInteraction);
-              document.removeEventListener('touchstart', handleUserInteraction);
-            } catch (playError) {
-              // Игнорируем ошибки воспроизведения
-            }
-          };
+                      // Пробуем воспроизвести после взаимодействия пользователя
+            const handleUserInteraction = async () => {
+              try {
+                await video.play();
+                document.removeEventListener('click', handleUserInteraction);
+                document.removeEventListener('keydown', handleUserInteraction);
+                document.removeEventListener('touchstart', handleUserInteraction);
+              } catch {
+                // Игнорируем ошибки воспроизведения
+              }
+            };
           
           document.addEventListener('click', handleUserInteraction);
           document.addEventListener('keydown', handleUserInteraction);
@@ -82,7 +82,7 @@ export const VideoHeroWidget: React.FC<VideoHeroWidgetProps> = ({
     };
 
     // Обработчик ошибок
-    const handleError = (event: Event) => {
+    const handleError = () => {
       // Игнорируем ошибки видео
     };
 

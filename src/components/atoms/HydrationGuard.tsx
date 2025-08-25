@@ -12,7 +12,6 @@ export const HydrationGuard: React.FC<HydrationGuardProps> = ({
   fallback = null 
 }) => {
   const [isHydrated, setIsHydrated] = useState(false);
-  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     // Принудительно устанавливаем гидратацию как завершенную
