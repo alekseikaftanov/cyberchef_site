@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { ClientScripts } from "@/components/atoms/ClientScripts";
 import { HydrationGuard } from "@/components/atoms/HydrationGuard";
+import { ExtensionBlocker } from "@/components/atoms/ExtensionBlocker";
+import { NoSSR } from "@/components/atoms/NoSSR";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -197,10 +199,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${inter.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        <HydrationGuard>
-          {children}
-          <ClientScripts />
-        </HydrationGuard>
+        <NoSSR>
+          <HydrationGuard>
+            {children}
+            <ClientScripts />
+            <ExtensionBlocker />
+          </HydrationGuard>
+        </NoSSR>
       </body>
     </html>
   );

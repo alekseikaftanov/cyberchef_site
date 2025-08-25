@@ -15,38 +15,23 @@ export const HydrationGuard: React.FC<HydrationGuardProps> = ({
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    // Проверяем, что гидратация прошла успешно
-    const checkHydration = () => {
-      try {
-        // Проверяем, что DOM полностью загружен
-        if (document.readyState === 'complete') {
-          setIsHydrated(true);
-        } else {
-          // Ждем полной загрузки DOM
-          window.addEventListener('load', () => setIsHydrated(true));
-        }
-      } catch (error) {
-        console.warn('Hydration check failed:', error);
-        setHasError(true);
-        setIsHydrated(true); // Показываем контент даже при ошибке
-      }
+    // Принудительно устанавливаем гидратацию как завершенную
+    const forceHydration = () => {
+      setIsHydrated(true);
     };
 
-    checkHydration();
+    // Небольшая задержка для стабилизации
+    const timeoutId = setTimeout(forceHydration, 100);
 
-    // Обработчик ошибок гидратации
-    const handleHydrationError = (event: ErrorEvent) => {
-      if (event.message.includes('hydration') || event.message.includes('Hydration')) {
-        console.warn('Hydration error detected, attempting recovery...');
-        setHasError(true);
-        setIsHydrated(true);
-      }
-    };
-
-    window.addEventListener('error', handleHydrationError);
+    // Также проверяем готовность DOM
+    if (document.readyState === 'complete') {
+      setIsHydrated(true);
+    } else {
+      window.addEventListener('load', () => setIsHydrated(true));
+    }
 
     return () => {
-      window.removeEventListener('error', handleHydrationError);
+      clearTimeout(timeoutId);
     };
   }, []);
 
@@ -55,21 +40,6 @@ export const HydrationGuard: React.FC<HydrationGuardProps> = ({
     return <>{fallback}</>;
   }
 
-  // Если была ошибка гидратации, показываем контент с предупреждением
-  if (hasError) {
-    return (
-      <>
-        {children}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              console.warn('Hydration completed with warnings. This is normal when browser extensions modify the DOM.');
-            `
-          }}
-        />
-      </>
-    );
-  }
-
+  // Всегда показываем контент после гидратации
   return <>{children}</>;
 };
