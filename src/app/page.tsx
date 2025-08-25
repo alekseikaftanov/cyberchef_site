@@ -7,6 +7,7 @@ import { ServicesWidget } from '@/components/organisms/ServicesWidget';
 import { FutureWidget } from '@/components/organisms/FutureWidget';
 import FadeIn from '@/components/atoms/FadeIn';
 import { Footer } from '@/components/organisms/Footer';
+import { VideoTest } from '@/components/atoms/VideoTest';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
 
   return (
     <ClientLayout>
+      {/* Тестовый компонент для видео (только в development) */}
+      {process.env.NODE_ENV === 'development' && <VideoTest />}
+      
       {/* Hero секция */}
       <div id="hero">
         <FadeIn durationMs={1000} delayMs={300} triggerOnScroll id="hero-fade">
