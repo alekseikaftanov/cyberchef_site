@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
           {
             key: 'X-Frame-Options',
             value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
           }
         ],
       },
@@ -23,9 +27,16 @@ const nextConfig: NextConfig = {
   // Настройки для лучшей обработки гидратации
   experimental: {
     optimizePackageImports: ['@/components'],
+    // Дополнительные настройки для стабильности
+    serverComponentsExternalPackages: [],
   },
   // Отключаем строгий режим для разработки
   reactStrictMode: false,
+  // Настройки для стабильности гидратации
+  compiler: {
+    // Отключаем некоторые оптимизации, которые могут вызывать проблемы
+    removeConsole: false,
+  },
 };
 
 export default nextConfig;
