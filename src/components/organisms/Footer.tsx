@@ -41,7 +41,7 @@ export const Footer = () => {
                 href="mailto:business@cyberchef.com"
                 className="block lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-[478px] min-h-[44px] text-white font-[var(--font-inter)] font-medium text-lg sm:text-2xl lg:text-[40px] leading-[110%] tracking-[-0.02em] underline opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
               >
-                info@cyberchief.ru
+                info@cyberchef-vv.ru
               </a>
             </div>
           </div>
@@ -74,6 +74,9 @@ export const Footer = () => {
               </p>
               <p className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[66px]">
                 123592, г. Москва, вн.тер.г., мун. округ Строгино, ул. Кулакова, д. 20, к. 1, помещ. 8/1
+              </p>
+              <p className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[66px]">
+              +7 (495) 147-34-80
               </p>
             </div>
             
