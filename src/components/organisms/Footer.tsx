@@ -38,7 +38,7 @@ export const Footer = () => {
             {/* Right Column - Email */}
             <div className="w-full lg:w-[478px] min-h-[60px] lg:min-h-[170px] relative lg:flex lg:items-end">
               <a 
-                href="mailto:business@cyberchef.com"
+                href="mailto:info@cyberchef-vv.ru"
                 className="block lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-[478px] min-h-[44px] text-white font-[var(--font-inter)] font-medium text-lg sm:text-2xl lg:text-[40px] leading-[110%] tracking-[-0.02em] underline opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
               >
                 info@cyberchef-vv.ru
