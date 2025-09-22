@@ -146,7 +146,7 @@ export const VideoHeroWidget: React.FC<VideoHeroWidgetProps> = ({
         </h1>
         
         <p className="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-3xl">
-          Мы создаем технологическую инфраструктуру для современного ритейла: от умных магазинов до интеллектуальной логистики.
+          Мы создаем технологическую инфраструктуру для современного ритейла: от умных магазинов до интеллектуальной логистики
         </p>
       </div>
     </div>
