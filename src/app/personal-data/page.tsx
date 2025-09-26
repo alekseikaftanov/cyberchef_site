@@ -30,7 +30,7 @@ export default function PersonalData() {
   return (
     <div className="min-h-screen w-full bg-black flex flex-col items-center">
       <Header />
-      <div className="relative w-full max-w-[1440px] min-h-screen flex flex-col items-start gap-8 px-32 pt-20 pb-8 mt-20">
+      <div className="relative w-full max-w-[1440px] min-h-screen flex flex-col items-start gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 lg:px-32 pt-16 sm:pt-20 pb-8 mt-16 sm:mt-20">
         {/* Кнопка "На главную" */}
         <button
           onClick={handleBackToMain}
@@ -45,7 +45,7 @@ export default function PersonalData() {
         </button>
         
         {/* Основной контент */}
-        <div className="w-[884px] flex flex-col gap-8">
+        <div className="w-full max-w-[884px] flex flex-col gap-4 sm:gap-6 lg:gap-8">
           <PersonalDataText />
         </div>
       </div>

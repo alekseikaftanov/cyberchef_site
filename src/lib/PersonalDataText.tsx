@@ -3,21 +3,21 @@
 import React from 'react';
 
 export const PersonalDataText = () => (
-  <div className="w-full flex flex-col gap-8">
+  <div className="w-full flex flex-col gap-4 sm:gap-6 lg:gap-8">
     {/* Заголовок */}
-    <h1 className="font-[var(--font-inter)] font-medium text-[40px] leading-[110%] tracking-[-0.02em] text-white w-[884px]">
+    <h1 className="font-[var(--font-inter)] font-medium text-2xl sm:text-3xl lg:text-[40px] leading-[110%] tracking-[-0.02em] text-white w-full max-w-[884px]">
       Согласие на обработку персональных данных ООО «Кибершеф»
     </h1>
     
-    <div className="flex flex-col gap-6 w-[884px]">
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+    <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Настоящим, в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», 
         вы подтверждаете своё согласие на обработку ООО «Кибершеф», юридический адрес: 
         123592, г. Москва, вн.тер.г. муниципальный округ Строгино, ул. Кулакова, д. 20, к. 1, помещ. 8/1 
         (далее — Кибершеф) ваших персональных данных.
       </p>
       
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Настоящим согласием вы подтверждаете, что проинформированы о том, что под обработкой персональных данных 
         понимаются действия с персональными данными, определённые в Федеральном законе № 152-ФЗ от 27.07.2006 
         «О персональных данных», а именно: сбор, запись, систематизация, накопление, хранение, уточнение 
@@ -25,39 +25,39 @@ export const PersonalDataText = () => (
         удаление персональных данных, совершаемые использованием средств автоматизации Кибершеф.
       </p>
       
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Данным согласием вы подтверждаете, что проинформированы о том, что обработка предоставляемых вами 
         персональных данных может осуществляется в следующих целях:
       </p>
       
-      <div className="flex flex-col gap-6 w-[884px]">
-        <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <div className="flex flex-col gap-4 sm:gap-6 w-full">
+        <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
           • связь с Пользователем, направление Пользователю сообщений, уведомлений, запросов, ответов, документов, 
           сообщений рекламного или информационного характера, или иных сообщений или документов, направленных на 
           представление персонализированных предложений и/или улучшения качества услуг;
         </p>
-        <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+        <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
           • обработка обращений, жалоб, запросов, сообщений, направляемых Оператором и Пользователем друг другу 
           в целях обеспечения безопасного и удобного функционала Сайта, эффективному отображению информации и 
           получения обратной связи;
         </p>
-        <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+        <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
           • оставление Пользователем отзывов об услугах Оператора для использования их Оператором в рекламных целях;
         </p>
-        <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+        <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
           • осуществление и/или исполнение функций, полномочий и обязанностей, возложенных законодательством 
           Российской Федерации на Кибершеф.
         </p>
       </div>
       
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Настоящее согласие распространяется на следующие персональные данные: имя, фамилия, отчество, дата рождения, 
         адрес доставки; контактный телефон, сведения об организации, электронная почта, ник в кроссплатформенной 
         системе мгновенного обмена сообщениями Telegram или иных мессенджерах, должность, сведения о стране, городе, 
         области проживания, текст сообщения (если текст сообщения содержит персональные данные).
       </p>
       
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Срок действия вашего согласия является неограниченным, однако, вы вправе в любой момент отозвать настоящее 
         согласие, путём направления письменного уведомления на адрес: 123592, г. Москва, вн.тер.г. муниципальный 
         округ Строгино, ул. Кулакова, д. 20, к. 1, помещ. 8/1, с пометкой «отзыв согласия на обработку персональных данных». 
@@ -65,14 +65,14 @@ export const PersonalDataText = () => (
         данного уведомления.
       </p>
       
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Кибершеф гарантирует соблюдение следующих прав субъекта персональных данных: право на получение сведений о том, 
         какие персональные данные субъекта персональных данных хранятся у Кибершеф; право на удаление, уточнение или 
         исправление хранящихся у Кибершеф персональных данных; иные права, установленные действующим законодательством 
         Российской Федерации.
       </p>
       
-      <p className="font-[var(--font-inter)] font-normal text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-[884px]">
+      <p className="font-[var(--font-inter)] font-normal text-base sm:text-lg lg:text-xl leading-[135%] tracking-[-0.02em] text-white opacity-80 w-full">
         Обращаем ваше внимание, что отзыв вашего согласия на обработку персональных данных влечёт за собой удаление 
         вашей учётной записи с Веб-сайта (https://cyberchief.ru), а также уничтожение записей, содержащих ваши 
         персональные данные, в информационных системах обработки персональных данных Кибершеф, что может сделать 
