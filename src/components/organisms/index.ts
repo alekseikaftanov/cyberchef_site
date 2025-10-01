@@ -7,4 +7,5 @@ export { ResumePopup } from './ResumePopup';
 export { VideoHeroWidget } from './VideoHeroWidget';
 export { AboutWidget } from './AboutWidget';
 export { ServicesWidget } from './ServicesWidget';
+export { TechStackWidget } from './TechStackWidget';
 export { FutureWidget } from './FutureWidget'; 

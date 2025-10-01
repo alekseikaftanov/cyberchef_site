@@ -4,6 +4,7 @@ import { ClientLayout } from '@/components/organisms/ClientLayout';
 import { VideoHeroWidget } from '@/components/organisms/VideoHeroWidget';
 import { AboutWidget } from '@/components/organisms/AboutWidget';
 import { ServicesWidget } from '@/components/organisms/ServicesWidget';
+import { TechStackWidget } from '@/components/organisms/TechStackWidget';
 import { FutureWidget } from '@/components/organisms/FutureWidget';
 import FadeIn from '@/components/atoms/FadeIn';
 import { Footer } from '@/components/organisms/Footer';
@@ -48,6 +49,13 @@ export default function Home() {
       <div id="services">
         <FadeIn durationMs={1000} delayMs={700} triggerOnScroll id="services-fade">
           <ServicesWidget />
+        </FadeIn>
+      </div>
+
+      {/* Tech Stack секция */}
+      <div id="tech-stack">
+        <FadeIn durationMs={1000} delayMs={800} triggerOnScroll id="tech-stack-fade">
+          <TechStackWidget />
         </FadeIn>
       </div>
 
