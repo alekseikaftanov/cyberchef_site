@@ -30,7 +30,7 @@ export const Footer = () => {
               {/* Main Description */}
               <div className="w-full">
                 <h2 className="text-white font-[var(--font-inter)] font-medium text-2xl sm:text-3xl lg:text-[40px] leading-[110%] tracking-[-0.02em]">
-                Начните работу с ключевой компанией в сфере автоматизации кулинарии
+                Начните работу с лидером в сфере автоматизации кулинарии
                 </h2>
               </div>
             </div>

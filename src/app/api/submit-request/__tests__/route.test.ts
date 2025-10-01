@@ -63,7 +63,7 @@ describe.skip('/api/submit-request', () => {
       formData: jest.fn().mockResolvedValue(formData),
     };
 
-    const response = await POST(mockRequest as any);
+    const response = await POST(mockRequest as Request);
     const result = await response.json();
 
     expect(response.status).toBe(200);

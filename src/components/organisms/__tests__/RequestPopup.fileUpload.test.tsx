@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { RequestPopup } from '../RequestPopup';
 
@@ -42,7 +42,13 @@ jest.mock('../RequestPopup.module.css', () => ({
 
 // Mock PhoneInput component
 jest.mock('@/components/atoms/PhoneInput', () => ({
-  PhoneInput: ({ value, onChange, onValidationChange, placeholder, error }: any) => (
+  PhoneInput: ({ value, onChange, onValidationChange, placeholder, error }: {
+    value: string;
+    onChange: (value: string) => void;
+    onValidationChange: (isValid: boolean) => void;
+    placeholder: string;
+    error?: string;
+  }) => (
     <input
       data-testid="phone-input"
       type="tel"
