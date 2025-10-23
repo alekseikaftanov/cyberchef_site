@@ -75,6 +75,9 @@ export const Footer = () => {
               <p className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[66px]">
                 123592, г. Москва, вн.тер.г., мун. округ Строгино, ул. Кулакова, д. 20, к. 1, помещ. 8/1
               </p>
+              <p className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[66px]">
+              Аккредитованная ИТ-компания (номер в реестре 76351 от 22.10.2025)
+              </p>
               <a 
                 href="tel:+74951473480"
                 className="text-white font-[var(--font-inter)] font-normal text-sm sm:text-base leading-[135%] tracking-[-0.02em] opacity-50 w-full lg:w-[284px] min-h-[66px] hover:opacity-80 transition-opacity cursor-pointer"
